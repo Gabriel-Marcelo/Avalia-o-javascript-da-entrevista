@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada de dados, faça:
+Mostre a quantidade de valores que foram lidos;
+Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
+Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+Calcule e mostre a soma dos valores;
+Calcule e mostre a média dos valores;
+Calcule e mostre a quantidade de valores acima da média calculada;
+Calcule e mostre a quantidade de valores abaixo de sete;
+Encerre o programa com uma mensagem;-->
+
+<script type="text/javascript">
+
+	var lista = [];
+
+	//Ler valores
+	do{
+		var entrada = prompt("Digite um número: ");
+		if(entrada != -1){
+			lista.push(entrada);
+		}		
+	}while(entrada != -1);
+
+	//Qtd de valores lidos
+	console.log("Qtd de valores lidos");
+	console.log(lista.length);
+
+	//Exibir na ordem
+	var valores = "";
+	console.log("Na ordem");
+	for(let j = 0; j< lista.length; j++){
+		valores += lista[j] + ", ";
+	}
+
+	console.log(lista.join(" "));
+
+
+	//Ordem inversa
+	console.log("Ordem inversa");
+	var tamanho = lista.length - 1;
+	for(let y = tamanho; y >= 0; y--){
+		console.log(lista[y]);
+	}
+
+	//Média
+	var media = 0;
+	var soma = 0;
+	for(let j = 0; j < lista.length; j++){
+		soma += lista[j];
+	}
+	media = soma / lista.length;
+
+	/*//Valores acima da média
+	for(let j; j < lista.length; j++){
+
+	}*/
+
+</script>
+
+
+</body>
+</html>
